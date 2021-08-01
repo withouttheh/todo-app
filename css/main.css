@@ -1,0 +1,259 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+
+/* header styles */
+
+header,
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background: inherit;
+    height: 10%;
+    border-radius: 0.5em;
+}
+
+h1 {
+    font-size: 1.618em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #002A10;
+    text-align: center;
+}
+
+.space {
+    /* height: 2%; */
+    background: inherit;
+}
+
+main {
+    height: 90%;
+    flex-direction: column;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.container {
+    height: 90%;
+    width: 40%;
+}
+
+
+/* mobile styles */
+
+@media (max-width: 480px) {
+    .container {
+        width: 80%;
+    }
+}
+
+
+/* date styles */
+
+.date {
+    height: 15%;
+    width: 100%;
+    box-shadow: 0 10px 3px -8px rgba(0, 0, 0, 0.2);
+    color: #002A10;
+    background: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2,
+h3 {
+    margin: 0.25em 0.75em;
+}
+
+h2 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #002A10;
+    text-transform: uppercase;
+    letter-spacing: 0.08em
+}
+
+h3 {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+div>p {
+    color: #002A10;
+    margin-top: 1.5em;
+}
+
+
+/* form styles */
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 10%;
+    width: 90%;
+}
+
+.text-bar {
+    height: 8%;
+    margin: 1.5em;
+    background: inherit;
+}
+
+.text-bar>input:nth-child(1) {
+    width: 80%;
+    height: 50%;
+    border-radius: 0.1em;
+    border: none;
+    border-bottom: 1px solid #002A10;
+    padding-left: 1em;
+    background: inherit;
+    color: #002A10;
+    font-size: 1em;
+}
+
+.text-bar>button:nth-child(2) {
+    height: 50%;
+    padding: 1em 1em;
+    border-radius: 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(228, 0, 70);
+    border-radius: 1em;
+    color: rgba(228, 0, 70);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.text-bar>button:nth-child(2):hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.1);
+    background-color: rgba(228, 0, 70);
+    color: white;
+}
+
+
+/* task panel styles */
+
+.task-panel {
+    color: white;
+    height: 77%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* task styles */
+
+.task {
+    height: 14%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-bottom: 0.2em;
+    color: black;
+    border-left: 0.25em solid #ab2f2f;
+}
+
+.task>input {
+    margin: 0 1em;
+}
+
+label {
+    display: flex;
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+label>input[type="checkbox"] {
+    display: flex;
+    margin: 0 1em;
+    cursor: pointer;
+    appearance: none;
+    height: 1em;
+    width: 1em;
+    border: 1px solid black;
+    position: relative;
+}
+
+label>input[type="checkbox"]:checked {
+    background-color: white;
+}
+
+label>input[type="checkbox"]:checked:after {
+    content: '\2714';
+    position: absolute;
+    bottom: -15%;
+    left: 0px;
+    color: #56ab2f;
+    font-size: 1.2em;
+}
+
+label>input[type="checkbox"]:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+label>span {
+    margin: 0 1em;
+}
+
+h4 {
+    flex: 6;
+}
+
+.task span {
+    flex: 1;
+    height: 80%;
+    border-left: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span>img {
+    height: 40%;
+    width: 50%;
+    cursor: pointer;
+}
+
+span>img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
