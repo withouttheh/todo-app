@@ -3,16 +3,18 @@
     padding: 0;
     font-family: Helvetica, sans-serif;
     text-decoration: none;
+    background-color: beige;
+}
+
+html {
+    height: 100%;
 }
 
 body {
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     background-color: beige;
 }
@@ -28,8 +30,6 @@ main {
 }
 
 header {
-    background: inherit;
-    height: 10%;
     border-radius: 0.5em;
 }
 
@@ -41,20 +41,14 @@ h1 {
     text-align: center;
 }
 
-.space {
-    /* height: 2%; */
-    background: inherit;
-}
-
 main {
-    height: 90%;
     flex-direction: column;
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
 }
 
 .container {
-    height: 90%;
+    height: 100%;
     width: 40%;
 }
 
@@ -71,11 +65,9 @@ main {
 /* date styles */
 
 .date {
-    height: 15%;
     width: 100%;
     box-shadow: 0 10px 3px -8px rgba(0, 0, 0, 0.2);
     color: #002A10;
-    background: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,31 +105,26 @@ form {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    height: 10%;
-    width: 90%;
+    width: 100%;
 }
 
 .text-bar {
-    height: 8%;
     margin: 1.5em;
-    background: inherit;
 }
 
 .text-bar>input:nth-child(1) {
     width: 80%;
-    height: 50%;
     border-radius: 0.1em;
     border: none;
     border-bottom: 1px solid #002A10;
-    padding-left: 1em;
-    background: inherit;
+    margin: 0 1em;
     color: #002A10;
     font-size: 1em;
 }
 
 .text-bar>button:nth-child(2) {
-    height: 50%;
-    padding: 1em 1em;
+    text-align: center;
+    padding: 0.25em 1em;
     border-radius: 0.1em;
     display: flex;
     justify-content: center;
@@ -163,7 +150,6 @@ form {
 
 .task-panel {
     color: white;
-    height: 77%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -173,7 +159,6 @@ form {
 /* task styles */
 
 .task {
-    height: 14%;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -239,7 +224,6 @@ h4 {
 
 .task span {
     flex: 1;
-    height: 80%;
     border-left: 1px solid black;
     display: flex;
     justify-content: center;
@@ -247,7 +231,6 @@ h4 {
 }
 
 span>img {
-    height: 40%;
     width: 50%;
     cursor: pointer;
 }
