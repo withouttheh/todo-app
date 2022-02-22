@@ -45,6 +45,7 @@ main {
     flex-direction: column;
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
+    height: auto;
 }
 
 .container {
@@ -66,7 +67,6 @@ main {
 
 .date {
     width: 100%;
-    box-shadow: 0 10px 3px -8px rgba(0, 0, 0, 0.2);
     color: #002A10;
     display: flex;
     align-items: center;
