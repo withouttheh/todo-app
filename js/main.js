@@ -1,19 +1,19 @@
 $(document).ready(function() {
 
     // Date settings
-    var months = ['January', 'February', 'March', 'April', 'May',
+    const months = ['January', 'February', 'March', 'April', 'May',
         'June', 'July', 'August', 'September',
         'October', 'November', 'December'
     ];
-    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
         'Thursday', 'Friday', 'Saturday'
     ];
 
-    var now = new Date();
-    var dayOfWeek = days[now.getDay()];
-    var dayOfMonth = now.getDate();
-    var month = months[now.getMonth()];
-    var year = now.getFullYear();
+    const now = new Date();
+    let dayOfWeek = days[now.getDay()];
+    let dayOfMonth = now.getDate();
+    let month = months[now.getMonth()];
+    let year = now.getFullYear();
 
     $('.date h2').text(dayOfWeek);
     $('.day').text(dayOfMonth);
@@ -23,15 +23,15 @@ $(document).ready(function() {
     // Input
     $(':text').val("");
 
-    var form = $('.text-bar');
+    let form = $('.text-bar');
 
     // Add task
-    var count = 0;
+    let count = 0;
 
     form.submit(function(e) {
             e.preventDefault();
             // Select input value and task panel div
-            var taskInput = $(':text');
+            let taskInput = $(':text');
 
             if (taskInput.val() === "") {
                 alert('Please add a task!');
@@ -39,8 +39,8 @@ $(document).ready(function() {
             } else {
                 count++;
                 // Add task to task panel
-                var taskPanel = $('.task-panel');
-                var task = '<div class="task"><label for="check-' + count + '"><input type="checkbox" name="checkbox" id="check-' + count + '"></label><h4>' + taskInput.val() + '</h4><span><img src="images/delete.svg" alt="delete"></span></div>';
+                let taskPanel = $('.task-panel');
+                let task = '<div class="task"><label for="check-' + count + '"><input type="checkbox" name="checkbox" id="check-' + count + '"></label><h4>' + taskInput.val() + '</h4><span><img src="images/delete.svg" alt="delete"></span></div>';
                 taskPanel.append(task).fadeIn(1000);
                 $('#text-input').val("");
 
